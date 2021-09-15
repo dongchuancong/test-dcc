@@ -7,6 +7,23 @@
     <title>Document</title>
 </head>
 <body>
+    <div>teshi</div>
+    <div>teshi</div>
+    <div>teshi</div>
     <div>teshi1</div>
+    <div>teshi2</div>
+    <div>teshi3</div>
+    <a href="https://www.baidu.com">测试跳转</a>
+    <button>点击</button>
+    <script>
+        console.log(window.history);
+        const btn = document.querySelector('button')
+        btn.onclick = function() {
+            window.history.pushState({id: 1}, '', '/test')
+        }
+        window.addEventListener('popstate',function(e) { 
+            console.log(e);
+        })
+    </script>
 </body>
 </html>
